@@ -1,0 +1,17 @@
+# Table of content
+# Learn more at https://jupyterbook.org/customize/toc.html
+#
+
+- file: home/intro
+- file: blog/intro
+  sections:
+  - title: Distance Algorithms in Data Science
+    file: blog/notebooks
+  - title: Detecting Malaria With Deep Learning Methods
+    file: blog/markdown   
+- file: tutorials/intro
+  sections: 
+  - title: Python Tutorial
+    file: tutorial/py4B
+- file: projects/intro
+  
