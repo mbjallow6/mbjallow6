@@ -5,10 +5,11 @@
 - file: home/intro
 - file: blog/intro
   sections:
+  - title: Data Processing For ML Task
+    file: blog/data_processing1
   - title: Distance Algorithms in Data Science
     file: blog/notebooks
-  - title: Detecting Malaria With Deep Learning Methods
-    file: blog/markdown   
+      
 - file: tutorials/intro
   sections: 
   - title: Python Tutorial
