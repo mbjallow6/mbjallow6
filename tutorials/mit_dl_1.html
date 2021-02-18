@@ -1,0 +1,1013 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introduction to Deep Learning &#8212; Momodou B Jallow</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="PROJECTS" href="../projects/intro.html" />
+    <link rel="prev" title="TUTORIALS" href="intro.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/luka.jpg" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Momodou B Jallow</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../home/intro.html">
+   HOME
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../blog/intro.html">
+   BLOG
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../blog/data_processing1.html">
+     Data Processing For Machine Learning
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../blog/notebooks.html">
+     Distance Algorithms in Data Science
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="intro.html">
+   TUTORIALS
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Introduction to Deep Learning by MIT
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../projects/intro.html">
+   PROJECTS
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../projects/rosalin.html">
+     ROSALIN Bioinformatics Challenge
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/tutorials/mit_dl_1.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/mbjallow6/mbjallow6"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/mbjallow6/mbjallow6/issues/new?title=Issue%20on%20page%20%2Ftutorials/mit_dl_1.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/mbjallow6/mbjallow6/main?urlpath=tree/root/tutorials/mit_dl_1.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#course-official-website-mit-2021">
+   Course Official Website MIT 2021
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-is-deep-learning">
+   What is Deep Learning?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-is-a-perceptron">
+   What is a Perceptron?
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#why-do-we-need-an-activation-function">
+     Why do we need an activation function?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-of-a-perceptron">
+     Example of a perceptron
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#building-nueral-networks-with-perceptron">
+   Building Nueral Networks With Perceptron
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#multi-output-perceptron">
+     Multi Output Perceptron
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#single-layer-neural-network">
+   Single Layer Neural Network
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#deep-neural-network">
+   Deep Neural Network
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#applying-neural-networks">
+   Applying Neural Networks
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-problem">
+     Example Problem
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sample-data">
+     sample data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#quantifying-loss">
+     Quantifying Loss
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#empirical-loss">
+     Empirical Loss
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#binary-cross-entropy-loss">
+     Binary Cross Entropy Loss
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mean-squared-error-loss">
+     Mean Squared Error Loss
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#training-neural-networks">
+   Training Neural Networks
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#gradient-descent-algorithm">
+     Gradient Descent Algorithm
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#gradient-descent-in-tensorflow">
+     Gradient Descent in tensorflow
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#backpropagation">
+     Backpropagation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#neural-networks-in-practice">
+   Neural Networks in Practice
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#optimization">
+     Optimization
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#learning-rate">
+     Learning Rate
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#putting-it-all-together-in-tensorflow">
+     Putting it All Together in tensorflow
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#mini-batches">
+       Mini-batches
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#stochastic-gradient-descent-algorithm">
+       Stochastic Gradient Descent Algorithm
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#for-a-single-data-point">
+       For a Single Data Point
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#for-a-batch-data-points">
+       For a Batch Data Points
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#advantages-of-mini-batch-training">
+       Advantages of Mini-Batch Training
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#overfitting">
+       OverFitting
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#regularization">
+       Regularization
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#dropout">
+       Dropout
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#early-stopping">
+       Early Stopping
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="introduction-to-deep-learning">
+<h1>Introduction to Deep Learning<a class="headerlink" href="#introduction-to-deep-learning" title="Permalink to this headline">¶</a></h1>
+<hr class="docutils" />
+<div class="section" id="course-official-website-mit-2021">
+<h2>Course Official Website <a class="reference external" href="http://introtodeeplearning.com/">MIT 2021</a><a class="headerlink" href="#course-official-website-mit-2021" title="Permalink to this headline">¶</a></h2>
+<p>Presented by: <strong>Alexander Amini</strong> and <strong>Ava Soleimany</strong></p>
+<p>This is a two weeks Bootcamp for MIT students but also accessible to the public after the two weeks. What is amazing about this course is, the instructors assumed that anyone attending this lecture is a complete beginner thus they start by explaining the concepts of Deep Learning from the ground-top. When I say from the ground-top I mean from understanding what is a perceptron, to developing a complete state-of-the-art deep neural network.</p>
+<p><strong><a class="reference external" href="http://introtodeeplearning.com/slides/6S191_MIT_DeepLearning_L1.pdf">See the official slides</a></strong></p>
+</div>
+<div class="section" id="what-is-deep-learning">
+<h2>What is Deep Learning?<a class="headerlink" href="#what-is-deep-learning" title="Permalink to this headline">¶</a></h2>
+<p>Deep Learning is a subset of Machine Learning that leverages neural networks to automatically extracts useful patterns and/or features from raw data, then use those features to learn to perform a task.</p>
+<p>Unlike machine learning where you are required to perform some form of data or feature engineering for greater outcomes, deep learning focuses on how to learned these features directly from raw data in a hierarchical manner without having the need to handcraft these features.</p>
+<p>You may be wondering if deep learning has these capabilities, why have we not take advantage of it long since?
+This is a genuine question. The fact is neural networks have been in existence  for decades, however, there were no suitable drivers. Therefore, it is fair to say the resurgence of deep learning is as a result of the following:-</p>
+<ul class="simple">
+<li><p>The accessibility of bid data</p></li>
+<li><p>Advance in computer hardware such as GPUs</p></li>
+<li><p>Availability of improved software libraries and/or tools such as tensorflow, pygeometric, etc.</p></li>
+</ul>
+<p>According to the course presenter, completing this course will empower you with both the technical and practical know-how to use deep learning methods to accomplish a task.</p>
+</div>
+<div class="section" id="what-is-a-perceptron">
+<h2>What is a Perceptron?<a class="headerlink" href="#what-is-a-perceptron" title="Permalink to this headline">¶</a></h2>
+<p>A perceptron is the building block of deep learning. A neural network constitutes a group of perceptrons.</p>
+<div class="math notranslate nohighlight">
+\[  \hat{y} = g \left(w_0 + \sum_{i=1}^m  x_i w_i \right) \]</div>
+<p>where : $<span class="math notranslate nohighlight">\( w_0 = \text{Bias}\)</span><span class="math notranslate nohighlight">\( \)</span><span class="math notranslate nohighlight">\( \hat{y} = Output \)</span><span class="math notranslate nohighlight">\( \)</span><span class="math notranslate nohighlight">\( g = \text{Non-linear activation fucntion} \)</span><span class="math notranslate nohighlight">\(   \)</span><span class="math notranslate nohighlight">\( \left(\sum_{i=1}^m  x_i w_i \right) =  \text{sum of input vectors and their corssponding  weights}\)</span>$</p>
+<p>There are numerous activation function. The choice of activation function is determine by the task at hand. Note the choosing the right activation function has a great influence on the outcome of the model therefore, it requires investing time to figure out which activation function best suits your problem.</p>
+<p><em>Bellow are three commonly used activation functions implemented in python</em>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">x</span><span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">sig</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="p">))</span> <span class="c1">#sigmoid function</span>
+<span class="n">sig_prime</span> <span class="o">=</span> <span class="n">sig</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">sig</span><span class="p">)</span> <span class="c1"># derivative of the sigmoid function</span>
+<span class="n">hyper_tan</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="p">))</span> <span class="c1"># hyperbolic tagent function</span>
+<span class="n">hyper_tan_prime</span> <span class="o">=</span> <span class="mi">1</span><span class="o">-</span><span class="p">(</span><span class="n">hyper_tan</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="c1"># derivative of the hyperbolic tagent function</span>
+<span class="n">reLu</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">maximum</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">x</span><span class="p">)</span> <span class="c1">#Rectified linear unit function</span>
+<span class="n">reLu_prime</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span> <span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span><span class="o">*</span><span class="mi">1</span> <span class="c1"># derivative of the rectified linear unit function</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+
+
+
+<span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">(</span><span class="n">w_pad</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Sigmoid Function&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">sig</span><span class="p">,</span> <span class="n">linewidth</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;g(x)&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">sig_prime</span><span class="p">,</span> <span class="n">linewidth</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;g(x)&#39;&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s1">&#39;left&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_position</span><span class="p">(</span><span class="s1">&#39;center&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s1">&#39;right&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_color</span><span class="p">(</span><span class="s1">&#39;none&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s1">&#39;top&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_color</span><span class="p">(</span><span class="s1">&#39;none&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_ticks_position</span><span class="p">(</span><span class="s1">&#39;bottom&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_ticks_position</span><span class="p">(</span><span class="s1">&#39;left&#39;</span><span class="p">)</span>
+
+
+
+<span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">(</span><span class="n">w_pad</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Hyperbolic Tangent Function&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">hyper_tan</span><span class="p">,</span> <span class="n">linewidth</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;g(x)&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">hyper_tan_prime</span><span class="p">,</span> <span class="n">linewidth</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;g(x)&#39;&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s1">&#39;left&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_position</span><span class="p">(</span><span class="s1">&#39;center&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s1">&#39;right&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_color</span><span class="p">(</span><span class="s1">&#39;none&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s1">&#39;bottom&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_position</span><span class="p">(</span><span class="s1">&#39;center&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s1">&#39;top&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_color</span><span class="p">(</span><span class="s1">&#39;none&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_ticks_position</span><span class="p">(</span><span class="s1">&#39;bottom&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_ticks_position</span><span class="p">(</span><span class="s1">&#39;left&#39;</span><span class="p">)</span>
+
+
+<span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Rectified Linear Unit Function&#39;</span><span class="p">)</span>
+<span class="n">Relu</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">reLu</span><span class="p">,</span> <span class="n">linewidth</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;g(x)&quot;</span><span class="p">)</span>
+<span class="n">Relu_prime</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">reLu_prime</span><span class="p">,</span> <span class="n">linewidth</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;g(x)&#39;&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s1">&#39;left&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_position</span><span class="p">(</span><span class="s1">&#39;center&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s1">&#39;right&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_color</span><span class="p">(</span><span class="s1">&#39;none&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s1">&#39;top&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_color</span><span class="p">(</span><span class="s1">&#39;none&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_ticks_position</span><span class="p">(</span><span class="s1">&#39;bottom&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_ticks_position</span><span class="p">(</span><span class="s1">&#39;left&#39;</span><span class="p">)</span>
+
+
+<span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>d:\programs\anaconda3\envs\jbooks\lib\site-packages\ipykernel_launcher.py:53: UserWarning: Matplotlib is currently using module://ipykernel.pylab.backend_inline, which is a non-GUI backend, so cannot show the figure.
+</pre></div>
+</div>
+<img alt="../_images/mit_dl_1_1_1.png" src="../_images/mit_dl_1_1_1.png" />
+</div>
+</div>
+<div class="section" id="why-do-we-need-an-activation-function">
+<h3>Why do we need an activation function?<a class="headerlink" href="#why-do-we-need-an-activation-function" title="Permalink to this headline">¶</a></h3>
+<p>The most simple and straightforward answer is to introduce non-linearity.
+For example, it is not always the case that problems are easily separable by a simple straight line. <em><strong>See the figures in the official slides!</strong></em></p>
+<p>What if you were asked to build a neural network that separate two classes of data points?</p>
+<p>You can see that it is practically impossible to separate the classes with a single straight line. Just because the example below is dummy doesn’t necessarily mean that you will not encounter similar problems in real-world datasets. In fact, real-world datasets are way more complex than the given dummy example. Therefore, we use activation function to introduce non-linearity in our neural network solutions.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+
+<span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">]</span>
+<span class="n">y_1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">y_2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">9</span><span class="p">]</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y_1</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;red&#39;</span> <span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y_2</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/mit_dl_1_3_0.png" src="../_images/mit_dl_1_3_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="example-of-a-perceptron">
+<h3>Example of a perceptron<a class="headerlink" href="#example-of-a-perceptron" title="Permalink to this headline">¶</a></h3>
+<p>Given the follow: $<span class="math notranslate nohighlight">\(
+w_0 = 1 \text{ and } W = \begin{bmatrix} 1 \\
+-2 \end{bmatrix}\)</span><span class="math notranslate nohighlight">\(
+
+\)</span><span class="math notranslate nohighlight">\(
+\hat{y} = g\left( w_0 + X^TW\right) 
+\)</span><span class="math notranslate nohighlight">\(
+
+\)</span><span class="math notranslate nohighlight">\(
+= g\left( 1 + \begin{bmatrix} x_1\\ x_2\end{bmatrix}^T\begin{bmatrix} 3\\ -2\end{bmatrix}\right) 
+\)</span><span class="math notranslate nohighlight">\(
+
+\)</span><span class="math notranslate nohighlight">\(
+\hat{y} = g\left( 1 + 3x_1- 2x_2\right) 
+\)</span><span class="math notranslate nohighlight">\(
+
+\)</span>\text{Assume the input} X = \begin{bmatrix} -1\ 2\end{bmatrix} <span class="math notranslate nohighlight">\(
+
+\)</span><span class="math notranslate nohighlight">\(
+\hat{y} = g\left( 1 + (3*-1)- (2*2)\right) 
+\)</span><span class="math notranslate nohighlight">\(
+
+\)</span><span class="math notranslate nohighlight">\(= g\left( -6\right) \approx 0.002\)</span><span class="math notranslate nohighlight">\(
+
+
+
+
+
+
+Please take note of the follow:
+\)</span><span class="math notranslate nohighlight">\( X^TW = \sum_{i=1}^m  x_i w_i\)</span>$
+
+- The summation above is a matrix</p>
+<ul class="simple">
+<li><p>t product. If you need a walkthrough or a detailed explanation of a dot product <span class="xref myst">see this link</span>
+- We are able to do the above calc</p></li>
+<li><p>tion because there were only two inputs but in a real-world problem, the step-by-step calculation above is impossible.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="building-nueral-networks-with-perceptron">
+<h2>Building Nueral Networks With Perceptron<a class="headerlink" href="#building-nueral-networks-with-perceptron" title="Permalink to this headline">¶</a></h2>
+<p>Before dive deep into the neural network world, it’s important to always important the various procedures or steps involve in the execution of neural networks. They are;</p>
+<ul class="simple">
+<li><p><strong>Take a dot-product of all the inputs and their corresponding weights</strong>.</p></li>
+<li><p><strong>Add bias to the result obtained from the dot-product</strong>.</p></li>
+<li><p><strong>Apply a non-linearity function to your result and then get your final output or result</strong>.</p></li>
+</ul>
+<p><em>It is that simple right?</em> Well, that’s just the high-level procedure. Actually, it is more complex than you might think. Each and every step mentioned above has a number of <strong>considerations</strong> and/or <strong>tweaks</strong>. Yes, there are tweaks and that’s where the difference in the performance of our models lies.</p>
+<div class="section" id="multi-output-perceptron">
+<h3>Multi Output Perceptron<a class="headerlink" href="#multi-output-perceptron" title="Permalink to this headline">¶</a></h3>
+<p>Earlier our example was a single perceptron, but that was just to give you a baseline or foundational understanding of the concept of <strong>neural networks</strong>. In reality, a <strong>deep learning</strong> architecture or model is a stack of <strong>Dense Layers</strong>. This is, inputs are densely connected to each neuron of dense layer/s. Now let’s see how we mathematically represents dense layer. <strong><a class="reference external" href="http://introtodeeplearning.com/slides/6S191_MIT_DeepLearning_L1.pdf">For a visual illustration, see the official slides</a></strong></p>
+<div class="math notranslate nohighlight">
+\[  z_i = \left(w_{0,i} + \sum_{j=1}^m  x_j w_{j,i} \right) \]</div>
+<p><em><strong>It has been too much theory and mathematic formulas right? Well, that was quite useful to build up your understanding of neural networks. Enough of the words now let’s take a look at how to implement a dense layer from scratch using tensorflow</strong></em>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#import tensorflow as tf</span>
+<span class="c1">#import keras</span>
+<span class="c1">#class MyDenseLayer(tf.keras.layers.Layer):</span>
+<span class="c1">#   def __init__(self, input_dim, output_dim):</span>
+<span class="c1">#      super(MyDenseLayer, self).__init__()</span>
+<span class="c1">#</span>
+<span class="c1">#      self.W = self.add_weight([input_dim, output_dim])</span>
+<span class="c1">#      self.b = self.add_weight([1, output_dim])</span>
+<span class="c1">#</span>
+<span class="c1">#   def call(self,inputs):</span>
+<span class="c1">#      z = tf.matmul(input, self.W) + self.b </span>
+<span class="c1">#      output = tf.math.sigmoid(z)</span>
+<span class="c1">#</span>
+<span class="c1">#      return output</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
+<span class="kn">from</span> <span class="nn">tensorflow</span> <span class="kn">import</span> <span class="n">keras</span>
+<span class="k">class</span> <span class="nc">MyDenseLayer</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Layer</span><span class="p">):</span>
+   <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_dim</span><span class="p">,</span> <span class="n">output_dim</span><span class="p">):</span>
+      <span class="nb">super</span><span class="p">(</span><span class="n">MyDenseLayer</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+
+      <span class="bp">self</span><span class="o">.</span><span class="n">W</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">add_weight</span><span class="p">([</span><span class="n">input_dim</span><span class="p">,</span> <span class="n">output_dim</span><span class="p">])</span>
+      <span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">add_weight</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="n">output_dim</span><span class="p">])</span>
+
+   <span class="k">def</span> <span class="nf">call</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">inputs</span><span class="p">):</span>
+      <span class="n">z</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="nb">input</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">W</span><span class="p">)</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">b</span> 
+      <span class="n">output</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">math</span><span class="o">.</span><span class="n">sigmoid</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+
+      <span class="k">return</span> <span class="n">output</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>I guess you might be wondering how come thousands of words became 11 lines of code?</p>
+<p>Well, yes this is how easy it is. In fact, it is much easier by using the tesorflow implementation to avoid building layers from scratch.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
+
+<span class="n">Layer</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Dense</span><span class="p">(</span><span class="n">units</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Actually, if you could recall in the beginning, we did mention  the drivers or motivation for deep learning. One of them was the availability of rich software libraries and tools. Tensorflow, Kera, PyTorch, etc are among these amazing tools or packages.</p>
+<p>In the code above, <code class="docutils literal notranslate"><span class="pre">tf.keras.layers.Layer</span></code> is a class from which all layers inherit. This is a class implementing common neural network operations such as convolution etc. that requires managing weights, losses, updates, and inter-layer connectivity. For detail information about <code class="docutils literal notranslate"><span class="pre">tf.keras.layers.Layer</span></code> class see the documentation <a class="reference external" href="https://www.tensorflow.org/api_docs/python/tf/keras/layers/Layer">for version 2.x</a> and <a class="reference external" href="https://docs.w3cub.com/tensorflow~1.15/keras/layers/layer.html">for version 1.x</a>.</p>
+</div>
+</div>
+<div class="section" id="single-layer-neural-network">
+<h2>Single Layer Neural Network<a class="headerlink" href="#single-layer-neural-network" title="Permalink to this headline">¶</a></h2>
+<p>Now that we have understood what perceptron and dense layers are, let’s combine this together to create our first single-layer neural network.</p>
+<p>It has four parts or sections if you wish, an input layer, dense layer, hidden layer, and final output. If you have been following for the first time you might be a bit lost at this point. But it’s okay if you are! However, just stay still while I break it down into digestible pieces.</p>
+<p>Earlier, we said for a perceptron, the final output is determined as follow:
+$<span class="math notranslate nohighlight">\(  \hat{y} = g \left(w_0 + \sum_{i=1}^m  x_i w_i \right) \)</span>$</p>
+<p>and then we said the sum of the inputs and their corresponding weights is as follow:
+$<span class="math notranslate nohighlight">\( \left(\sum_{i=1}^m  x_i w_i \right) \)</span><span class="math notranslate nohighlight">\( or \)</span><span class="math notranslate nohighlight">\( X^TW \)</span>$</p>
+<p>and lately we said a multi-output dense layer is is follow:
+$<span class="math notranslate nohighlight">\(  z_i = \left(w_{0,i} + \sum_{j=1}^m  x_j w_{j,i} \right) \)</span>$
+but in all the above expressions we have not mentioned the hidden layers. Thus, these were incomplete deep neural network architectures.  First let’s see a representation of a hidden layer for a single layer neural network.</p>
+<div class="math notranslate nohighlight">
+\[  z_i =\underbrace{ \left(w_{0,i}^{(1)} + \sum_{j=1}^m  x_j w_{j,i}^{(1)} \right)}_\text{first dense layer} \]</div>
+<p>For a complete deep neural network, we must account for the hidden layer/s. This can be express as follow:</p>
+<div class="math notranslate nohighlight">
+\[  \hat{y} = g\underbrace{ \left(w_{0,i}^{(2)} + \sum_{i=1}^{d_i} \overbrace{ {g(z_j)}}^\text{hidden layer} w_{j,i}^{(2)} \right)}_\text{second dense layer} \]</div>
+<p>Alright! by now it’s a little be clear. If not just spend a little time and breakdown these equations further to a level you are able to understand.</p>
+<p>In a nutshell, the final output is determined by the summation of hidden layer/s and their associated weights plus the bias then pass it into a non-linear activation function.</p>
+<p>For example, lets take look at the computation of one neuron in the hidden layer:</p>
+<div class="math notranslate nohighlight">
+\[  z_2 = \left(w_{0,2}^{(1)} + \sum_{j=1}^m  x_j w_{j,2} \right) \]</div>
+<div class="math notranslate nohighlight">
+\[  z_2 = w_{0,i}^{(1)} + x_1 w_{1,2}^{(1)} + x_2 w_{2,2}^{(1)} + \ldots  + x_{m} w_{m,2}^{(1)} \]</div>
+</div>
+<div class="section" id="deep-neural-network">
+<h2>Deep Neural Network<a class="headerlink" href="#deep-neural-network" title="Permalink to this headline">¶</a></h2>
+<p>A deep neural network is a stack of dense or hidden layers. The dept of a neural network is determined by its dense layers. Therefore, in general, the value of neuron in a deep neural network is determined as follow:</p>
+<div class="math notranslate nohighlight">
+\[  z_{k,i} = w_{0,i}^{(k)} + \sum_{j=1}^{n_{k-1}}  g(z_{k-1,j}) w_{j,i}^{(k)}  \]</div>
+<p>and to implement this in tensorflow:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
+
+<span class="n">model</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">Sequential</span><span class="p">([</span>
+    <span class="c1">#tf.keras.layers.Dense(n1),</span>
+   <span class="c1"># tf.keras.layers.Dense(n2),</span>
+   <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Dense</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+  <span class="p">])</span>
+ <span class="c1">#The codes i commented above is just </span>
+ <span class="c1">#showing you that you can stack a number of dense layers </span>
+ <span class="c1">#that you want and </span>
+ <span class="c1">#pass in the number of neurons for each hidden layer.</span>
+</pre></div>
+</div>
+<p>See the documentation of <code class="docutils literal notranslate"><span class="pre">#tf.keras.Sequential</span></code> <a class="reference external" href="https://www.tensorflow.org/api_docs/python/tf/keras/Sequential">here</a>.</p>
+</div>
+<div class="section" id="applying-neural-networks">
+<h2>Applying Neural Networks<a class="headerlink" href="#applying-neural-networks" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="example-problem">
+<h3>Example Problem<a class="headerlink" href="#example-problem" title="Permalink to this headline">¶</a></h3>
+<p>Will I pass this class/ course ?
+Given the following;</p>
+<p><span class="math notranslate nohighlight">\(x_1 = 4=\text{Number of lectures you attend}\)</span>
+<span class="math notranslate nohighlight">\(x_2 = 5 =\text{Hours spent on the final project}\)</span></p>
+<p>Computing this will be quite an easy task right? given that we know our inputs and how to find <span class="math notranslate nohighlight">\(\hat{y}\)</span>.</p>
+<ul class="simple">
+<li><p>image</p></li>
+</ul>
+<p>Okay, let’s assume that you have seen similar data (<em>number of lectures attend and amount of time spent on final project</em>) for students in the previous class.</p>
+</div>
+<div class="section" id="sample-data">
+<h3>sample data<a class="headerlink" href="#sample-data" title="Permalink to this headline">¶</a></h3>
+<p>Student that pass the previous class:</p>
+<p><span class="math notranslate nohighlight">\(x_1 = [3,4,5,6,7,9,11,11,12] \)</span>
+<span class="math notranslate nohighlight">\(x_2 = [8,5,3,7,6,5,2,5,3] \)</span></p>
+<p>Student that fail the previous class:</p>
+<p><span class="math notranslate nohighlight">\(x_1 = [1,1,3] \)</span>
+<span class="math notranslate nohighlight">\(x_2 = [1,3,2] \)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">Px1</span><span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">12</span><span class="p">]</span> <span class="c1"># number lectures attended by student who pass</span>
+
+<span class="n">Px2</span><span class="o">=</span> <span class="p">[</span><span class="mi">8</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span> <span class="c1"># number of hours spent in final project by wstudent who pass</span>
+
+<span class="n">Fx1</span> <span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span> <span class="c1"># number lectures attended by student who fail</span>
+<span class="n">Fx2</span> <span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span> <span class="c1"># number of hours spent in final project by wstudent who fail</span>
+
+<span class="n">Yx1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="c1">#number of lectures you&#39;ve attended</span>
+<span class="n">Yx2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="c1">#number of hours you&#39;ve spent on your final project</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">Px1</span><span class="p">,</span><span class="n">Px2</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;Green&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">Fx1</span><span class="p">,</span><span class="n">Fx2</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;Red&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">Yx1</span><span class="p">,</span><span class="n">Yx2</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;Blue&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;function matplotlib.pyplot.show(close=None, block=None)&gt;
+</pre></div>
+</div>
+<img alt="../_images/mit_dl_1_11_1.png" src="../_images/mit_dl_1_11_1.png" />
+</div>
+</div>
+<p>Now let’s say you saw this data and plot it against your score as above. Look at the scatter plot, your chances of passing this class are very high. However, you decided to compute the probability of you passing the class using a neural network. And your results show that your chances of passing the class is 10%.</p>
+<p>That sounds strange, right?</p>
+<p>With all the hype surrounding <strong>deep neural networks</strong>, it’s not able to accurately predict your chances of passing a class given only two inputs. Well, before you doubt the model, ask yourself if the previous class data is removed from the scatter plot above, how will determine your chances of passing?</p>
+<p>I hope answering this question will help you to understand why it was said earlier that access to <strong>big data</strong> is a key driving factor for the resurgence of deep learning. Without data, you can’t train your model and without training a model, there is nothing a deep neural network can do for you.</p>
+</div>
+<div class="section" id="quantifying-loss">
+<h3>Quantifying Loss<a class="headerlink" href="#quantifying-loss" title="Permalink to this headline">¶</a></h3>
+<p>The quality of our neural network model is determined by the loss function.</p>
+<div class="math notranslate nohighlight">
+\[L \left(\underbrace{f(x^{(i)}; W)}_\text{Predicted}, \underbrace{y^{(1)}}_\text{Actual}\right)\]</div>
+<p><em><strong>Note: The more the predicted value is closer to the actual value, the more accurate our model and vice versa</strong></em>.</p>
+</div>
+<div class="section" id="empirical-loss">
+<h3>Empirical Loss<a class="headerlink" href="#empirical-loss" title="Permalink to this headline">¶</a></h3>
+<p>Earlier we’ve seen a loss function, well that was for calculating the loss of predicting the score of a single student as in our example above. Therefore, if we want to know how well our model will perform, we use the <strong>empirical loss</strong> or also refer to as the <strong>mean-error</strong>.</p>
+<div class="math notranslate nohighlight">
+\[J(W) = \frac1n \sum_{(i=1)}^n L (\underbrace{f(x^{(i)}; W)}_\text{Predicted}, \underbrace{y^{(1)}}_\text{Actual})\]</div>
+</div>
+<div class="section" id="binary-cross-entropy-loss">
+<h3>Binary Cross Entropy Loss<a class="headerlink" href="#binary-cross-entropy-loss" title="Permalink to this headline">¶</a></h3>
+<p>As the name implies, “binary” meaning two, <strong>binary cross-entropy loss</strong> can be used to determine the performance of binary classification models.</p>
+<div class="math notranslate nohighlight">
+\[J(W) = - \frac1n \sum_{(i=1)}^n \underbrace{y^{(1)}}_\text{Actual} log (\underbrace{f(x^{(i)}; W)}_\text{Predicted} + (1 - \underbrace{y^{(1)}}_\text{Actual}) log( 1 - \underbrace{f(x^{(i)}; W)}_\text{Predicted}))\]</div>
+<p><em><strong>Oh!, hold on! wait a moment how am I suppose to know all these equation or formulas</strong></em>?</p>
+<p>Well, you are required to understand how this equation works behind the scene but you are not required to know them by head(<em>I mean memorize</em>). In fact, you might not even implementing such equations from scratch. Really? YES! see below for  the implemtation using tensorflow;</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">loss</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">reduce_mean</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">softmax_cross_entropy_with_logits</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">predicted</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="mean-squared-error-loss">
+<h3>Mean Squared Error Loss<a class="headerlink" href="#mean-squared-error-loss" title="Permalink to this headline">¶</a></h3>
+<p>In the case of a regression problem, you can use mean square error loss to determine how accurate your model is.</p>
+<div class="math notranslate nohighlight">
+\[J(W) = \frac1n \sum_{(i=1)}^n ( \underbrace{y^{(1)}}_\text{Actual} - \underbrace{f(x^{(i)}; W)}_\text{Predicted} )^2\]</div>
+</div>
+</div>
+<div class="section" id="training-neural-networks">
+<h2>Training Neural Networks<a class="headerlink" href="#training-neural-networks" title="Permalink to this headline">¶</a></h2>
+<p>The essence of training a neural network is to minimize the loss function, in other words, refers to loss optimization.</p>
+<div class="math notranslate nohighlight">
+\[W^{*} =\underset{W}{argmin}\frac1n \sum_{(i=1)}^n L (\underbrace{f(x^{(i)}; W)}_\text{Predicted}, \underbrace{y^{(1)}}_\text{Actual})\]</div>
+<p>or</p>
+<div class="math notranslate nohighlight">
+\[W^{*} =\underset{W}{argmin} J(W) \text{ where } W = [W^{(0)}, W^{(1)}, \ldots]\]</div>
+<p><em><strong>Here <span class="math notranslate nohighlight">\(J(W)\)</span> refers to the empirical loss and <span class="math notranslate nohighlight">\(W\)</span> is referring to all the weights for each layer</strong></em>.</p>
+<p>The objective of training a neural network is to find the lowest point in the <strong>loss landscape</strong> that will produce the optimal weight for our network.</p>
+<p>So how do we find the lowest point in the landscape above? It can be found by computing the <strong>gradient</strong> of the landscape at a given or chosen point. This will tell us the highest or steepest ascent.</p>
+<div class="math notranslate nohighlight">
+\[\text{gradient } = \frac{\partial J(W)}{\partial W}\]</div>
+<p><em><strong>For example, pick a random point on the landscape and compute its gradient. Now instead of going up, we want to go to the lowest point. Therefore, if the direction is upwards, we take the negative of the gradient and step downwards. At each step, we compute the gradient and move downwards. This is repeated until we converge at a local minimum (it could be a global minimum as well)</strong></em>.</p>
+<div class="section" id="gradient-descent-algorithm">
+<h3>Gradient Descent Algorithm<a class="headerlink" href="#gradient-descent-algorithm" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p><em>Initialize random weights <span class="math notranslate nohighlight">\(\approx N(0,\sigma ^2)\)</span></em></p></li>
+<li><p><em>Loop until convergence:</em></p>
+<ol class="simple">
+<li><p><em>Compute gradient, <span class="math notranslate nohighlight">\(\frac{\partial J(W)}{\partial W}\)</span></em></p></li>
+<li><p><em>Update weights, <span class="math notranslate nohighlight">\(W \gets W - \eta \frac{\partial J(W)}{\partial W}\)</span></em></p></li>
+</ol>
+</li>
+<li><p><em>Return weights</em></p></li>
+</ol>
+</div>
+<div class="section" id="gradient-descent-in-tensorflow">
+<h3>Gradient Descent in tensorflow<a class="headerlink" href="#gradient-descent-in-tensorflow" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
+
+<span class="n">weights</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">([</span><span class="n">tf</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">()])</span>
+
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+   <span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">GradientTape</span><span class="p">()</span> <span class="k">as</span> <span class="n">g</span><span class="p">:</span>
+      <span class="n">loss</span> <span class="o">=</span> <span class="n">compute_loss</span><span class="p">(</span><span class="n">weights</span><span class="p">)</span>
+      <span class="n">gradient</span> <span class="o">=</span> <span class="n">g</span><span class="o">.</span><span class="n">gradient</span><span class="p">(</span><span class="n">loss</span><span class="p">,</span><span class="n">weights</span><span class="p">)</span>
+   <span class="n">weights</span> <span class="o">=</span> <span class="n">weights</span> <span class="o">-</span> <span class="n">lr</span> <span class="o">+</span> <span class="n">gradient</span>
+</pre></div>
+</div>
+<p><em><strong>Note: In the code above, lr (also denoted as <span class="math notranslate nohighlight">\(\eta\)</span> in the algorithm above)refers to the learning rate. And it is if not the most important parameter of your model</strong></em>.</p>
+</div>
+<div class="section" id="backpropagation">
+<h3>Backpropagation<a class="headerlink" href="#backpropagation" title="Permalink to this headline">¶</a></h3>
+<p>Inside the loop where the gradient descent is computed in the algorithm above, is a process called <strong>Backpropagation</strong>.  The backpropagation tells us how does a change in the weights (derivative of the gradient in respect to weight) affects the final loss i.e. <span class="math notranslate nohighlight">\(J(W)\)</span>?</p>
+<p><em>For example, given a simple neural network with two weights (as in the figure above) how do we determine the derivative of <span class="math notranslate nohighlight">\(w_2\)</span>? This can be done using the <a class="reference external" href="https://www.calculushowto.com/derivatives/chain-rule-examples/">chain rule</a></em></p>
+<p><span class="math notranslate nohighlight">\(\frac{\partial J(W)}{\partial W_2} =\frac{\partial J(W)}{\partial \hat {y}} * \frac{\partial \hat {y}}{\partial W_2}\)</span></p>
+<p>How abour <span class="math notranslate nohighlight">\(w_1\)</span>?</p>
+<p><span class="math notranslate nohighlight">\(\frac{\partial J(W)}{\partial W_1} =\frac{\partial J(W)}{\partial \hat {y}} * \frac{\partial \hat {y}}{\partial z_1}*\frac{\partial  z_1}{\partial W_1}\)</span></p>
+<p>So you see that we are stating from the loss all the way (recursively) to the first layer of weights.</p>
+</div>
+</div>
+<div class="section" id="neural-networks-in-practice">
+<h2>Neural Networks in Practice<a class="headerlink" href="#neural-networks-in-practice" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="optimization">
+<h3>Optimization<a class="headerlink" href="#optimization" title="Permalink to this headline">¶</a></h3>
+<p>In practice, you will never come across a neural network as simple as two or so neurons. Finding the optimal weights can be very challenging. Therefore, computing the gradient descent or backpropagation is actually very <strong>computationally expensive or intensive</strong> (let’s say you thousand, millions, or even billions of weights).  Another problem associated with computing the gradient descent is the loss can be non-covex, thus your algorithm can easily get stuck at local minimum as a result producing undesirable results.</p>
+</div>
+<div class="section" id="learning-rate">
+<h3>Learning Rate<a class="headerlink" href="#learning-rate" title="Permalink to this headline">¶</a></h3>
+<p>Recall the equation bellow;</p>
+<div class="math notranslate nohighlight">
+\[ W \gets W - \eta \frac{\partial J(W)}{\partial W}\]</div>
+<p>The learning rate (<span class="math notranslate nohighlight">\(\eta\)</span>) is a small but extremely important factor that determines the step size (magnitude) of our gradient descent.</p>
+<p>When determining a learning rate, it’s important to take note of the following;</p>
+<ul class="simple">
+<li><p>If you take very small baby steps, your model can get stock at the local minimum.</p></li>
+<li><p>Likewise, if your step size are too large, you might end up skipping the global minimum.</p></li>
+</ul>
+<p><strong>Therefore, the challenge is how do we determine suitable learning rates that are large enough to avoid getting stuck at local minimum but small enough to avoid diverging from the global minimum</strong>.</p>
+<p>How do we choose or optimize our learning rate?</p>
+<p>Well, there are no theoretically proven methods regarded as the most optimal. However, due to its importance in training a model, there has been extensive research about this topic.</p>
+<p>One commonly used method is as simple as trying as many learning rates as you can, if you are fortunate enough so be it <a class="reference external" href="https://youtu.be/bR7z2MA0p-o">this video might be helpful</a>.</p>
+<p>Another method of find =ing an optimal learning rate is called <em>Adaptive Learning Rates</em> <a class="reference external" href="https://towardsdatascience.com/learning-rate-schedules-and-adaptive-learning-rate-methods-for-deep-learning-2c8f433990d1">read more from this article</a> or <a class="reference external" href="https://www.sciencedirect.com/topics/computer-science/adaptive-learning-rate">this</a>.</p>
+<p>Also most of these <a class="reference external" href="https://www.tensorflow.org/addons/api_docs/python/tfa/optimizers">optimizers</a> have been implemented in <a class="reference external" href="https://www.tensorflow.org/addons/api_docs/python/tfa/optimizers">tensorflow</a>.</p>
+</div>
+<div class="section" id="putting-it-all-together-in-tensorflow">
+<h3>Putting it All Together in tensorflow<a class="headerlink" href="#putting-it-all-together-in-tensorflow" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
+
+<span class="n">model</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">Sequential</span><span class="p">([</span>
+ <span class="n">here</span> <span class="n">you</span> <span class="n">determine</span> <span class="n">your</span> <span class="n">dense</span> <span class="n">layers</span>
+<span class="p">])</span>
+
+<span class="n">optimizer</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">optimizer</span><span class="o">.</span><span class="n">SGD</span><span class="p">()</span>
+
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">prediction</span> <span class="o">=</span> <span class="n">model</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">GradientTape</span><span class="p">()</span> <span class="k">as</span> <span class="n">tape</span><span class="p">:</span>
+        <span class="n">loss</span> <span class="o">=</span> <span class="n">compute_loss</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">prediction</span><span class="p">)</span>
+    <span class="n">grads</span> <span class="o">=</span> <span class="n">tape</span><span class="o">.</span><span class="n">gradient</span><span class="p">(</span><span class="n">loss</span><span class="p">,</span> <span class="n">model</span><span class="o">.</span><span class="n">trainable_variables</span><span class="p">)</span>
+    <span class="n">optimizer</span><span class="o">.</span><span class="n">apply_gradients</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">grads</span><span class="p">,</span> <span class="n">model</span><span class="o">.</span><span class="n">trainable_variable</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="section" id="mini-batches">
+<h4>Mini-batches<a class="headerlink" href="#mini-batches" title="Permalink to this headline">¶</a></h4>
+<p>In the gradient descent algorithm above, we’ve been told that each data point must be computed before the algorithm is completed. Imagine having millions of data points! Therefore this computation is most of the times not feasible. Thus, the concept of batching, in this case, refer to as <strong>Stochastic Gradient Descent</strong>. Instead of computing all the data points, we choose a single data point compute it and update weights based on the selected data point. This has the advantage of being very fast, but it has the disadvantage of being too noisy. Therefore, to regularize the noise, instead of picking a single data point, we will choose a batch of data points.</p>
+</div>
+<div class="section" id="stochastic-gradient-descent-algorithm">
+<h4>Stochastic Gradient Descent Algorithm<a class="headerlink" href="#stochastic-gradient-descent-algorithm" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="for-a-single-data-point">
+<h4>For a Single Data Point<a class="headerlink" href="#for-a-single-data-point" title="Permalink to this headline">¶</a></h4>
+<ol class="simple">
+<li><p><em>Initialize random weights <span class="math notranslate nohighlight">\(\approx N(0,\sigma ^2)\)</span></em></p></li>
+<li><p><em>Loop until convergence:</em></p>
+<ol class="simple">
+<li><p><em>Pick single data point <span class="math notranslate nohighlight">\(i\)</span></em></p></li>
+<li><p><em>Compute gradient, <span class="math notranslate nohighlight">\(\frac{\partial J_i(W)}{\partial W}\)</span></em></p></li>
+<li><p><em>Update weights, <span class="math notranslate nohighlight">\(W \gets W - \eta \frac{\partial J(W)}{\partial W}\)</span></em></p></li>
+</ol>
+</li>
+<li><p><em>Return weights</em></p></li>
+</ol>
+</div>
+<div class="section" id="for-a-batch-data-points">
+<h4>For a Batch Data Points<a class="headerlink" href="#for-a-batch-data-points" title="Permalink to this headline">¶</a></h4>
+<ol class="simple">
+<li><p><em>Initialize random weights <span class="math notranslate nohighlight">\(\approx N(0,\sigma ^2)\)</span></em></p></li>
+<li><p><em>Loop until convergence:</em></p>
+<ol class="simple">
+<li><p><em>Pick batch of <span class="math notranslate nohighlight">\(B\)</span> data points</em></p></li>
+<li><p><em>Compute gradient, <span class="math notranslate nohighlight">\(\frac{\partial J(W)}{\partial W} = \frac1B \sum_{k=1}^B\frac{\partial J_k(W)}{\partial W}\)</span></em></p></li>
+<li><p><em>Update weights, <span class="math notranslate nohighlight">\(W \gets W - \eta \frac{\partial J(W)}{\partial W}\)</span></em></p></li>
+</ol>
+</li>
+<li><p><em>Return weights</em></p></li>
+</ol>
+</div>
+<div class="section" id="advantages-of-mini-batch-training">
+<h4>Advantages of Mini-Batch Training<a class="headerlink" href="#advantages-of-mini-batch-training" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>More acurate estimation of gradient</p></li>
+<li><p>Smoother convergence</p></li>
+<li><p>Allows for larger learning rates</p></li>
+<li><p>Parallelizabl computing with GPUs</p></li>
+</ul>
+</div>
+<div class="section" id="overfitting">
+<h4>OverFitting<a class="headerlink" href="#overfitting" title="Permalink to this headline">¶</a></h4>
+<p>Overfitting is one of the most fundamental problems in the machine/deep learning field. It is also referred to as the problem of generalization. A good model is a model that doesn’t <strong>underfit</strong> (the model does not have the capacity to fully learn the data) and doesn’t <strong>overfit</strong> (model is too complex to the extent it does not generalize well), instead, a good model should be an <strong>ideal fit</strong> (a model that can generalize in case it comes across a new set of related data).</p>
+<ul class="simple">
+<li><p>image fitting problem</p></li>
+</ul>
+<p>The test data help us to evaluate how good our model is. Therefore, during training, we should not, in any case, introduce the test data to our model until at the last and final step. Thus, the idea of a <strong>train-validate-test</strong> arisen.</p>
+</div>
+<div class="section" id="regularization">
+<h4>Regularization<a class="headerlink" href="#regularization" title="Permalink to this headline">¶</a></h4>
+<p>In order to avoid overfitting our model, certain strategies are introduced during the training process. Among these methods is <em>regularization</em>.</p>
+<p>Regularization is a technique that constrains our optimization problem to discourage complex models. At the same time, improve the generalization of our model when it encouter new data. There are various form of regularization among them are;</p>
+</div>
+<div class="section" id="dropout">
+<h4>Dropout<a class="headerlink" href="#dropout" title="Permalink to this headline">¶</a></h4>
+<p>To randomly set some activations to 0 during training. This is done by dropping some  of the activation nodes in the hidden layer. This will force the network not to depend on an individual done.</p>
+</div>
+<div class="section" id="early-stopping">
+<h4>Early Stopping<a class="headerlink" href="#early-stopping" title="Permalink to this headline">¶</a></h4>
+<p>This the process of stopping the training process before we have the chance of overfitting our model.</p>
+<p>To learn more about regularization, check this video by <a class="reference external" href="https://youtu.be/6g0t3Phly2M">Andrew Ng</a>.</p>
+<p>**Note I created is page for my own learning purpose and case someone else prefer reading than watching videos. For more visual illustrations see the <a class="reference external" href="http://introtodeeplearning.com/slides/6S191_MIT_DeepLearning_L1.pdf">official slides</a> **</p>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./tutorials"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="intro.html" title="previous page">TUTORIALS</a>
+    <a class='right-next' id="next-link" href="../projects/intro.html" title="next page">PROJECTS</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By mbjallow<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>

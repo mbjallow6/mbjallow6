@@ -1,10 +1,11 @@
-# Welcome to my blog 
-
+# BLOG 
+---
 ### Hi there 👋
+#### Welcome to the blog section of my tiny diary
 
-In this section, I will be sharing some intuitive tricks and methods related to **AI**, **Machine Learning**, **Web Development**, and **Others**.
+In this section, I will be sharing some useful articles, updates, tricks, and methods related to **AI**, **Machine Learning**, **Web Development**, and **Others**.
 
-I will try my best to make is it less wordy while getting to the root of the concepts with real-world examples and easy to read and understand codes. 
+I will try my best to make is it less wordy while getting to the root of the concepts with real-world examples that are easy to read and understand it related codes. 
 
 To navigate into any article of your choice, click on the title listed on your right hand side.
 
