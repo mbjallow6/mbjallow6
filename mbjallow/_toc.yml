@@ -1,18 +1,21 @@
 # Table of content
 # Learn more at https://jupyterbook.org/customize/toc.html
-#
 
 - file: home/intro
 - file: blog/intro
   sections:
-  - title: Data Processing For ML Task
+  - title: Data Processing For Machine Learning
     file: blog/data_processing1
   - title: Distance Algorithms in Data Science
     file: blog/notebooks
       
 - file: tutorials/intro
   sections: 
-  - title: Python Tutorial
-    file: tutorial/py4B
+  - title: Introduction to Deep Learning by MIT
+    file: tutorials/mit_dl_1
 - file: projects/intro
+  sections:
+  - title: ROSALIN Bioinformatics Challenge
+    file: projects/rosalin
+  
   
