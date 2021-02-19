@@ -7,7 +7,7 @@
   - title: Data Processing For Machine Learning
     file: blog/data_processing1
   - title: Distance Algorithms in Data Science
-    file: blog/notebooks
+    file: blog/distance_algo
       
 - file: tutorials/intro
   sections: 
