@@ -8,30 +8,44 @@ My initial degree was in **Public and Environmental Health**, however, during th
 Well before I dive deep into the field of computer science, my major interest was in healthcare application development and its related. I am now a **Data Science** enthusiast and my general research interest is in applied **Artificial Intelligence** for *Healthcare*, *life Science*, *Social Networks*, using **Machine Learning** and **Deep Learning** methods. Main focus on graph neural networks, graph database technologies, data mining, and big data analytics. 
 
 # WORK EXPERIENCE
+---
+#### [Omdena](https://omdena.com)
+Feb. 2020 - Now
+**Jr. Machine Learning Engineer (Online COllaborator)**
 
-## [Omdena](https://omdena.com)
-#### Jr. Machine Learning Engineer (Online COllaborator) (Feb. 2020 - Now)
+==========================================================================================
+
+#### [Guangzhou Panyu Zhifeng Microelectronics Co., Ltd.](https://trio-engineering.com/) (Trio Engeering Co., LTD)
+Dec. 2018 - Jan. 2020
+**Software Engineer (Intern)**
+
+==========================================================================================
+#### [Ministry of Health and Social Welfare](www.moh.gov.gm)
+Jan. 2013 - Jun. 2017
+**Public Health Official**
 
 
-## [Guangzhou Panyu Zhifeng Microelectronics Co., Ltd.](https://trio-engineering.com/) (Trio Engeering Co., LTD)
-#### Software Engineer (Intern) (Dec. 2018 - Jan. 2020)
-
-## [Ministry of Health and Social Welfare](www.moh.gov.gm)
-#### Public Health Official (Jan. 2013 - Jun. 2017)
-
-
+---
 # EDUCATION AND TRAINING
+---
+#### [South China University of Technology](http://scut.edu.cn/sie_en) 
+Sept. 2017 - Now
+**Bsc. Computer Science and Technology**
 
-## [South China University of Technology](http://scut.edu.cn/sie_en) (Sept. 2017 - Now)
-#### Bsc. Computer Science and Technology
+==========================================================================================
 
-## [IKCEST](http://engedu.ikcest.org/unesco/visual/micromasters/5) (Hosted by Tsinghua Universit)(Mar. 2020 - May. 2020)
+#### [IKCEST](http://engedu.ikcest.org/unesco/visual/micromasters/5) (Hosted by Tsinghua Universit
+Mar. 2020 - May. 2020
+**Micro-Diploma of Computer Science**
 
-#### Micro-Diploma of Computer Science
+==========================================================================================
 
-## [WorldQuant University](https://wqu.org)(Sep. 2019 - Mar. 2020)
+#### [WorldQuant University](https://wqu.org)
+Sep. 2019 - Mar. 2020
+**Applied Data Science and Scientific Computing**
 
-#### Applied Data Science and Scientific Computing 
+==========================================================================================
 
-## [Gambia College](http://gambiacollege.edu.gm)(Jan. 2010 - Dec. 2012)
-#### Higher National Diploma of Public Health
+#### [Gambia College](http://gambiacollege.edu.gm)
+Jan. 2010 - Dec. 2012
+**Higher National Diploma of Public Health**
